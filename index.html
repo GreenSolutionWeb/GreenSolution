@@ -51,7 +51,7 @@
 
     .image-tile {
       position: relative;
-      padding-bottom: 100%; /* Maintain 1:1 aspect ratio */
+      padding: 10%; /* Maintain 1:1 aspect ratio */
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -71,8 +71,79 @@
       align-items: center;
       justify-content: center;
     }
-  
-        .footer {
+
+    /* underline hover effect */
+
+      .underline-hover {
+        position: relative;
+        display: inline-block;
+      }
+
+      .underline-hover::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #198574;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .underline-hover:hover::before {
+        width: 100%;
+      }
+    /* navbar hover effect */
+
+    .textnav-hover:hover {
+      color : #198574
+    }
+    .container {
+      padding: 20px;
+    }
+    
+    .box {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+    
+    .box.left {
+      text-align: start;
+    }
+    
+    .box.right {
+      text-align: center;
+    }
+    
+    .box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .box ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .box ul li i {
+      margin-right: 10px;
+    }
+    
+    .res-feature {
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      color: black;
+      text-align: start;  
+    }
+
+
+    .footer {
       background-color: #f8f9fa;
       padding: 20px;
     }
@@ -101,7 +172,7 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-4">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-2 shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="assets/dummy.svg" width="160" class="d-inline-block">
@@ -113,14 +184,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto ms-auto fontinter fw-normal fs-5">
-          <li class="nav-item mx-2">
-            <a class="nav-link " href="#aboutus">About</a>
+          <li class="nav-item textnav-hover mx-2">
+            <a class="nav-link textnav-hover underline-hover" href="index.html#aboutus">About</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link textnav-hover underline-hover" href="index.html#services">Services</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link textnav-hover underline-hover" href="contactform.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -145,18 +216,46 @@
         <img src="assets/dummy.svg" alt="Image" class="img-fluid resized-image">
       </div>
       <div class="col-md-6 d-flex flex-column justify-content-center ">
-        <h2 class="text-start fontinter fs-2 fw-semibold" >What we are </h2>
+        <h2 class="text-start fontinter fs-2 fw-semibold " style=" text-decoration: underline;">What we are </h2>
         <p class="fontmontserrat fs-5" style="text-align: justify; line-height: 2; color: grey;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget eleifend enim.
           Quisque non porttitor leo. Quisque efficitur magna sed suscipit commodo. Sed id urna tincidunt, placerat nunc
           eget, semper lectus.</p>
-          <a href="#service" class="btn btn-outline-success fw-bold rounded-pill fs-5 ">
+          <a href="#services" class="btn btn-outline-success fw-bold rounded-pill fs-5 ">
             <span class="p-4"> What we do</span> </a>
       </div>
     </div>
   </section>
+<!-- Feature --> 
+
+  <div class="bg-light res-feature" id="services">
+    <div class="container p-5">
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="box left">
+            <h3 class="text-start fontmontserrat fs-2 fw-bold text-dark " >What we do  </h3>
+            <p class="fontmontserrat fs-5" style="text-align: justify; line-height: 2; color: grey;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla, tortor non tincidunt placerat, est purus commodo velit.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="box right shadow-lg rounded-3 p-5">
+            <ul>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
   <div class="container">
     <h2 class="container text-center fontinter fs-2 fw-semibold p-5" >Our Partner </h2>
-
     <div class="row">
       <div class="col-sm-6 col-md-4 col-lg-4">
         <div class="image-tile">
@@ -185,44 +284,48 @@
       </div>
       <div class="col-sm-6 col-md-4 col-lg-4">
         <div class="image-tile">
-          <img src="assets/dummy2.svg" alt="Image 2">
+          <img src="assets/dummy2.svg" alt="Image 3">
         </div>
       </div>
+      
+    
       <!-- Repeat the above three columns to create additional rows -->
     </div>
   </div>
-  <footer class="w-100 py-4 flex-shrink-0 bg-light " id="footerstyle">
-    <div class="container py-4">
-        <div class="row gy-4 gx-4">
+
+  
+  <!-- Footer -->
+
+ 
+  <footer class="w-100 py-4 flex-shrink-0 bg-dark " id="footerstyle">
+    <div class="container py-4 ">
+        <div class="row gy-4 gx-4 ">
             <div class="col-lg-7 col-md-7 ">
                 <a class="navbar-brand my-5" href="index.html">
                     <img src="assets/dummy.svg" width="160" height="50" class="d-inline-block">
                 </a>
-                <p class="small text-dark"> Homhub is a high quality on-demand home service company. </p>
-                <p class="small text-dark mb-0">2022 &copy; Copyrights. All rights reserved.</p>
+                <p class="small text-secondary"> Lorem Ipsum Sip lo </p>
+                <p class="small text-secondary mb-0">2022 &copy; Copyrights. All rights reserved.</p>
             </div>
             <div class="col-lg-2 col-md-3">
-                <h5 class="mb-3 text-dark">Pages</h5>
+                <h5 class="mb-3 text-secondary fw-semibold">Pages</h5>
                 <ul class="list-unstyled text-muted">
                     <li class="nav-item  ">
-                        <a class="nav-link  mx-md-2" href="#">Home</a>
+                        <a class="nav-link  my-md-2" href="#">Home</a>
                     </li>
                     <li class=" nav-item">
-                        <a class="nav-link  mx-md-2" href="#aboutus">About</a>
+                        <a class="nav-link  my-md-2" href="#aboutus">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  mx-md-2" href="#services">Service</a>
+                        <a class="nav-link  my-md-2" href="#services">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  mx-md-2" href="contactform.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  mx-md-2" href="mitra.html">Mitra</a>
+                        <a class="nav-link  my-md-2" href="contactform.html">Contact</a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3">
-                <h5 class="text-dark mb-3">Social Media</h5>
+                <h5 class=" text-secondary mb-3 fw-semibold">Social Media</h5>
                 <ul class="list-unstyled text-muted">
                     <div class="d-flex flex-collumn  ">
                         <a href="/index.html" class="nav-link p-0 mx-1"><i class="bi bi-linkedin fs-2"></i></a>
