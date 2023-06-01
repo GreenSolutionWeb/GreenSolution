@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles for the cover hero */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    .fontinter {
+      font-family: 'Inter', sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    .fontmontserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    .fontpoppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    .resized-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .res-height {
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      color: black;
+      text-align: start;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+      .res-height {
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        color: black;
+        text-align: start;
+        padding-bottom: 10vh;
+      }
+    }
+
+    .image-tile {
+      position: relative;
+      padding: 20px;
+      /* Maintain 1:1 aspect ratio */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+    }
+
+    .image-tile img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img2 {
+      position: relative;
+      top: 0;
+      left: 0;
+      max-width: 200px;
+      height: auto;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* underline hover effect */
+
+    .underline-hover {
+      position: relative;
+      display: inline-block;
+    }
+
+    .underline-hover::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #34A853;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .underline-hover:hover::before {
+      width: 100%;
+    }
+
+    /* navbar hover effect */
+
+    .textnav-hover:hover {
+      color: #34A853
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .box {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+
+    .box.left {
+      text-align: start;
+    }
+
+    .box.right {
+      text-align: center;
+    }
+
+    .box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .box ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .box ul li i {
+      margin-right: 10px;
+    }
+
+    .res-feature {
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      text-align: center;
+    }
+
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .footer-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-section img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .footer-section .social-icons {
+      display: flex;
+    }
+
+    .footer-section .social-icons a {
+      margin-right: 10px;
+    }
+
+
+    .card .card1 {
+      height: 100%;
+      text-align: center;
+
+    }
+
+    .card-img-top1 {
+      object-fit: cover;
+      height: auto;
+      width: 50%;
+      display: flex;
+      align-self: center;
+    }
+
+    .hero {
+      background-color: #ffffff;
+      padding: 50px;
+      padding-top: 20vh;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      height: 100%;
+    }
+
+
+
+    #card2 {
+      height: 0;
+      padding-bottom: 100%;
+      position: relative;
+      overflow: hidden;
+      border: none;
+    }
+
+    .card-img-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tile {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tile img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      object-fit: fill;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top  shadow-sm">
+    <div class="container py-2">
+      <!-- <a class="navbar-brand" href="#">
+        <img src="assets/dummy.svg" width="160" class="d-inline-block">
+
+      </a> -->
+
+      <a class="navbar-brand" href="#"><span class="fontinter fw-bold fs-4" style="color: #34A853;">Green</span><span
+          class="fst-italic fw-light fs-4">Solution</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto ms-auto fontpoppins fw-normal fs-5">
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="#">Home</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="index.html#aboutus">About</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="contactform.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cover hero section -->
+  <!-- <section class="cover-hero ">
+    <div class="container">
+      <h1 class="fs-1 fontinter fs-1 fw-bold">Welcome to my website</h1>
+      <p class="py-2 fs-5 fontmontserrat fw-lighter text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. <br> Nam accumsan euismod diam, sed molestie leo egestas tincidunt. </p>
+      <a href="#aboutus" class="btn btn-outline-success fw-bold rounded-pill fs-5 ">
+        <span class="p-4"> Learn More</span> </a>
+    </div>
+  </section> -->
+
+  <div class="container-fluid hero ">
+    <div class="row ">
+      <div class="col-md-6 ">
+        <div class="content">
+          <h1 class="fs-1 fontmontserrat ">Find Your <span style="color: #34A853;" class="fw-semibold"> Realiable
+            </span> and <span style="color: #34A853;" class="fw-semibold">Actionable </span> Green Solution<br></h1>
+          <p class="py-2 fs-6 fontpoppins fw-lighter ">End-to-End Services for your organization’s climate action needs
+          </p>
+          <a href="#aboutus" class="btn btn-success fw-light rounded-pill fs-5 " style="background-color: #34A853;">
+            <span class="px-4 fontpoppins fs-5" style="letter-spacing: 2px; "> Learn More</span> </a>
+        </div>
+
+      </div>
+      <div class="col-md-6 d-none d-lg-block">
+        <img src="assets/300ppi/Asset 1.png" alt="Image" class="hero-image">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Rest of the website content goes here -->
+  <section class="container p-5" id="aboutus">
+    <div class="row res-height ">
+      <div class="col-md-6 d-flex align-items-center p-md-5 d-none d-lg-block">
+        <img src="assets/300ppi/Asset 1.png" alt="Image" class="img-fluid resized-image">
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center p-md-5 ">
+        <h2 class="text-start fontpoppins fs-4 fw-semibold " style="color: #36894c;">What We Are </h2>
+        <p class="fontmontserrat fs-2 fw-normal" style="text-align: start; line-height: 1.3;letter-spacing: 2px;">Greeen
+          Action Partner for your Organization</p>
+        <p class="fs-5 py-md-2" style="text-align: justify;">
+          We help your organization to do green-related projects based on your goals, budget, timeline and existing
+          condition. Our services are flexible based on your needs. </p>
+        <a href="#services" class="btn fw-normal rounded-pill fs-5 " style="background-color: #34A853; color: white;">
+          <span class="p-md-4"> What we do</span> </a>
+      </div>
+    </div>
+  </section>
+  <!-- Feature -->
+
+  <div class="bg-white res-feature" id="services">
+    <!-- <div class="container p-5">
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="box left">
+            <h3 class="text-start fontmontserrat fs-2 fw-bold text-dark ">What we do </h3>
+            <p class="fontmontserrat fs-5" style="text-align: justify; line-height: 2; color: grey;">Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed fringilla, tortor non tincidunt placerat, est purus commodo
+              velit.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="box right shadow-lg rounded-3 p-5">
+            <ul>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+              <li class="fs-4"><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet,</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+    </div> -->
+
+    <div class="container">
+      <div class="row pt-md-5">
+        <div class="col">
+          <h2 class="container text-center fontpoppins fs-2 fw-semibold p-5" style="color: #36894c;">What We Do </h2>
+          <p class=" fs-6 fontpoppins" style="letter-spacing: 1px;line-height: 40px;">We deliver high quality services
+            based on your organization request</p>
+        </div>
+      </div>
+
+      <div class="row flex-wrap p-2">
+        <div class="col-lg-4 col-md-6 ">
+          <div class="card card1 p-3" style="border: transparent;">
+            <img src="assets/300ppi/Asset 2.png" class="card-img-top1" alt="Image 1">
+            <div class="card-body">
+              <h5 class="card-title fw-bold fontpoppins" style="color: #34A853;">Green Count</h5>
+              <p class="card-text fontpoppins fw-lighter">SaaS tool to calculate and monitor gas emmission data for
+                green decission</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card card1 p-3" style="border: transparent;">
+            <img src="assets/300ppi/Asset 3.png" class="card-img-top1" alt="Image 2">
+            <div class="card-body">
+              <h5 class="card-title fontpoppins fw-bold" style="color: #34A853;">Green Certificate</h5>
+              <p class="card-text fontpoppins fw-lighter">Tech-enabled tools to help Green Certificates issuance for
+                Project Developers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card card1 p-3" style="border: transparent;">
+            <img src="assets/300ppi/Asset 4.png " class="card-img-top1" alt="Image 3">
+            <div class="card-body">
+              <h5 class="card-title fontpoppins fw-bold" style="color: #34A853;">Green Project</h5>
+              <p class="card-text fontpoppins fw-lighter">B2B project for Carbon Offsets, RECs, as well as Sustainable
+                Products & Services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container py-5">
+    <h2 class="container text-center fontpoppins fs-2 fw-semibold p-5" style="color: #36894c;">Our Partner </h2>
+    <div class="container ">
+      <div class="row row-cols-1 row-cols-md-3 g-2">
+        <div class="col">
+          <div class="tile">
+            <img src="assets/partner/BPN.79c0d2fde0832ea61a13.png" alt="Image 1">
+          </div>
+        </div>
+        <div class="col">
+          <div class="tile">
+            <img src="assets/partner/FNPF.8ce1fd933f054fdc85c1.png" alt="Image 2">
+          </div>
+        </div>
+        <div class="col">
+          <div class="tile">
+            <img src="assets/partner/RimbaRayaConservation.93ea75bee794cf10532d.jpeg" alt="Image 3">
+          </div>
+        </div>
+        <div class="col">
+          <div class="tile">
+            <img src="assets/partner/Untitledqw.png" alt="Image 4">
+          </div>
+        </div>
+        <div class="col">
+          <div class="tile">
+            <img src="assets/partner/WiraEnergi.c341c5b2692048e60a9d.jpeg" alt="Image 5">
+          </div>
+        </div>
+        <div class="col">
+          <div class="tile">
+            <img src="assets/partner/WRI.b4efde4e0cd5b7530d4a.png" alt="Image 6">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+
+  <footer class="w-100 py-4 flex-shrink-0 bg-dark " id="footerstyle">
+    <div class="container py-4 ">
+      <div class="row gy-4 gx-4 ">
+        <div class="col-lg-7 col-md-7 ">
+          <!-- <a class="navbar-brand my-5" href="index.html">
+            <img src="assets/dummy.svg" width="160" height="50" class="d-inline-block">
+          </a> -->
+
+          <a class="navbar-brand" href="#"><span class="fontinter fw-bold fs-4"
+              style="color: #34A853;">Green</span><span class="fst-italic fw-light fs-4 text-white">Solution</span></a>
+          <p class="small text-secondary py-2"> End-to-End Services for your organization’s climate action needs </p>
+          <p class="small text-secondary mb-0">2022 &copy; Copyrights. All rights reserved.</p>
+        </div>
+        <div class="col-lg-2 col-md-3">
+          <h5 class="mb-3 text-secondary fw-semibold">Pages</h5>
+          <ul class="list-unstyled text-muted">
+            <li class="nav-item  ">
+              <a class="nav-link  my-md-2" href="#">Home</a>
+            </li>
+            <li class=" nav-item">
+              <a class="nav-link  my-md-2" href="#aboutus">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link my-md-2" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  my-md-2" href="contactform.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <h5 class=" text-secondary mb-3 fw-semibold">Social Media</h5>
+          <ul class="list-unstyled text-muted">
+            <div class="d-flex flex-collumn ">
+              <a href="/index.html" class="nav-link p-0 mx-1"><i class="bi bi-linkedin fs-2"></i></a>
+              <a href="/index.html" class="nav-link p-0 mx-1"><i class="bi bi-instagram fs-2"></i></a>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
