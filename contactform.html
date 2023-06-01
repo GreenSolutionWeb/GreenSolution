@@ -37,6 +37,7 @@
       width: 100%;
       height: auto;
     }
+
     .res-height {
       background-size: cover;
       height: 100vh;
@@ -44,21 +45,22 @@
       align-items: center;
       justify-content: start;
       color: black;
-      text-align: start;  
+      text-align: start;
     }
 
 
     .image-tile {
       position: relative;
-      padding: 10%; /* Maintain 1:1 aspect ratio */
+      padding: 10%;
+      /* Maintain 1:1 aspect ratio */
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;  
+      text-align: center;
 
     }
-    
+
     .image-tile img {
       position: relative;
       top: 0;
@@ -73,36 +75,38 @@
 
     /* underline hover effect */
 
-      .underline-hover {
-        position: relative;
-        display: inline-block;
-      }
+    .underline-hover {
+      position: relative;
+      display: inline-block;
+    }
 
-      .underline-hover::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: #198574;
-        transition: width 0.3s ease-in-out;
-      }
+    .underline-hover::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #198574;
+      transition: width 0.3s ease-in-out;
+    }
 
-      .underline-hover:hover::before {
-        width: 100%;
-      }
+    .underline-hover:hover::before {
+      width: 100%;
+    }
+
     /* navbar hover effect */
 
     .textnav-hover:hover {
-      color : #198574
+      color: #198574
     }
+
     .container {
       padding: 20px;
     }
-    
-   
-    
+
+
+
     .res-feature {
       background-size: cover;
       height: 100vh;
@@ -110,7 +114,7 @@
       align-items: center;
       justify-content: start;
       color: black;
-      text-align: start;  
+      text-align: start;
     }
 
 
@@ -118,23 +122,23 @@
       background-color: #f8f9fa;
       padding: 20px;
     }
-    
+
     .footer-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    
+
     .footer-section img {
       max-width: 100%;
       height: auto;
       margin-right: 10px;
     }
-    
+
     .footer-section .social-icons {
       display: flex;
     }
-    
+
     .footer-section .social-icons a {
       margin-right: 10px;
     }
@@ -143,26 +147,27 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-2 shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/dummy.svg" width="160" class="d-inline-block">
-
-      </a>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top  shadow-sm">
+    <div class="container py-2">
+      <a class="navbar-brand" href="#"><span class="fontinter fw-bold fs-4"
+        style="color: #34A853;">Green</span><span class="fst-italic fw-light fs-4 text-white">Solution</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto ms-auto fontinter fw-normal fs-5">
-          <li class="nav-item textnav-hover mx-2">
-            <a class="nav-link textnav-hover underline-hover" href="#aboutus">About</a>
+        <ul class="navbar-nav ml-auto ms-auto fontpoppins fw-normal fs-5">
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="index.html">Home</a>
           </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link textnav-hover underline-hover" href="#services">Services</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="index.html#aboutus">About</a>
           </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link textnav-hover underline-hover" href="#contact">Contact</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link textnav-hover underline-hover" href="contactform.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -176,30 +181,31 @@
         <div class="row">
           <div class="col-lg-8">
             <div class="box">
-              <h3 class="text-start fontmontserrat fs-2 fw-bold text-dark " >Tell Us Something  </h3>
-              <form>
+              <h3 class="text-start fontmontserrat fs-2 fw-bold text-dark ">Tell Us Something </h3>
+              <form action="https://formspree.io/f/mpzegabv" method="POST">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Subject</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="subject" class="form-control" id="exampleInputPassword1" name="subject">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <label for="exampleFormControlTextarea1" class="form-label">Your Request</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textarea"></textarea>
                 </div>
-
-              
-                <button type="submit" class="btn btn-success fw-bold rounded-pill fs-5 px-5 ">Submit</button>
-              </form> 
-            </div>
+                <button type="submit" class="btn fw-bold rounded-pill fs-5 px-5 "
+                  style="background-color: #34A853;color: white;">Send</button>
+              </form>
+          
+                          </div>
           </div>
           <div class="col-lg-4">
             <div class="box">
               <h5 class="fw-semibold">Address : </h5>
-              <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam sem sed bibendum sodales.</p>
+              <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam sem sed bibendum
+                sodales.</p>
               <h5 class="fw-semibold">Phone : </h5>
               <p class="fs-6">(+62)7078078078</p>
               <h5 class="fw-semibold">Email : </h5>
@@ -209,54 +215,53 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
 
 
-  
+
   <!-- Footer -->
 
   <footer class="w-100 py-4 flex-shrink-0 bg-dark " id="footerstyle">
     <div class="container py-4 ">
-        <div class="row gy-4 gx-4 ">
-            <div class="col-lg-7 col-md-7 ">
-                <a class="navbar-brand my-5" href="index.html">
-                    <img src="assets/dummy.svg" width="160" height="50" class="d-inline-block">
-                </a>
-                <p class="small text-secondary"> Lorem Ipsum Sip lo </p>
-                <p class="small text-secondary mb-0">2022 &copy; Copyrights. All rights reserved.</p>
-            </div>
-            <div class="col-lg-2 col-md-3">
-                <h5 class="mb-3 text-secondary fw-semibold">Pages</h5>
-                <ul class="list-unstyled text-muted">
-                    <li class="nav-item  ">
-                        <a class="nav-link  my-md-2" href="#">Home</a>
-                    </li>
-                    <li class=" nav-item">
-                        <a class="nav-link  my-md-2" href="#aboutus">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  my-md-2" href="#services">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  my-md-2" href="contactform.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3">
-                <h5 class=" text-secondary mb-3 fw-semibold">Social Media</h5>
-                <ul class="list-unstyled text-muted">
-                    <div class="d-flex flex-collumn  ">
-                        <a href="/index.html" class="nav-link p-0 mx-1"><i class="bi bi-linkedin fs-2"></i></a>
-                        <a href="/index.html" class="nav-link p-0 mx-1"><i class="bi bi-instagram fs-2"></i></a>
-                    </div>
-                </ul>
-            </div>
-
+      <div class="row gy-4 gx-4 ">
+        <div class="col-lg-7 col-md-7 ">
+          <a class="navbar-brand" href="#"><span class="fontinter fw-bold fs-4 "
+            style="color: #34A853;">Green</span><span class="fst-italic fw-light fs-4 text-white ">Solution</span></a>
+          <p class="small text-secondary py-2"> End-to-End Services for your organization’s climate action needs </p>
+          <p class="small text-secondary mb-0">2022 &copy; Copyrights. All rights reserved.</p>
         </div>
+        <div class="col-lg-2 col-md-3">
+          <h5 class="mb-3 text-secondary fw-semibold">Pages</h5>
+          <ul class="list-unstyled text-muted">
+            <li class="nav-item  ">
+              <a class="nav-link  my-md-2" href="#">Home</a>
+            </li>
+            <li class=" nav-item">
+              <a class="nav-link  my-md-2" href="#aboutus">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  my-md-2" href="#services">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  my-md-2" href="contactform.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <h5 class=" text-secondary mb-3 fw-semibold">Social Media</h5>
+          <ul class="list-unstyled text-muted">
+            <div class="d-flex flex-collumn  ">
+              <a href="/index.html" class="nav-link p-0 mx-1"><i class="bi bi-linkedin fs-2"></i></a>
+              <a href="/index.html" class="nav-link p-0 mx-1"><i class="bi bi-instagram fs-2"></i></a>
+            </div>
+          </ul>
+        </div>
+
+      </div>
     </div>
-</footer>
+  </footer>
   <!-- Bootstrap JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.bundle.min.js"></script>
 </body>
